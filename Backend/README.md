@@ -4,17 +4,15 @@
 
 **PORT** = 5000
 
-**MONOG_URL** = mongodb+srv://CustoMall:****@customall***********
+**MONOG_URL** = mongodb+srv://CustoMall:\***\*@customall****\*******
 
 **JWT_SECRET** = mysecretkey
 
-## Setup Backend 
+## Setup Backend
 
 **npm install**
 
 **npm start**
-
-
 
 # API Reference
 
@@ -23,6 +21,7 @@
 ```http
   POST /api/register
 ```
+
 ```http
   POST /api/login
 ```

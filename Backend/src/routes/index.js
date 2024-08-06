@@ -6,7 +6,7 @@ const { userLogin, userRegister } = require("../controllers/userControllers"); /
 Auth Routes
 */
 router.post("/register", userRegister);
-router.get("/login", userLogin);
+router.post("/login", userLogin);
 
 /*
 Home Routes
