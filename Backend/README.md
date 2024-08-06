@@ -23,3 +23,6 @@
 ```http
   POST /api/register
 ```
+```http
+  POST /api/login
+```
