@@ -7,7 +7,6 @@ const generateToken = (user) => {
     expiresIn: "1h",
   });
 };
-
 const userRegister = async (req, res) => {
   const { username, email, password } = req.body;
   try {
@@ -17,23 +16,26 @@ const userRegister = async (req, res) => {
       return res.status(400).json({ message: "User already exists" });
     }
 
+    // Hash the password before saving
+    const hashedPassword = await bcrypt.hash(password, 10);
+
     user = new User({
       username,
       email,
-      password,
+      password: hashedPassword,
     });
     await user.save();
 
-    const token = generateToken(token);
+    const token = generateToken(user); // Pass the user object
     res.status(201).json({ token });
   } catch (error) {
-    console.error("Register Faill", error);
-    res.status(500).send("Server Error check backend code userRegister ");
+    console.error("Register Failed. Error:", error.message); // Improved logging
+    res.status(500).send("Server Error. Check backend code in userRegister.");
   }
 };
 
 const userLogin = (req, res) => {
-  res.send("hellow");
+  res.send("hello");
 };
 
 module.exports = {

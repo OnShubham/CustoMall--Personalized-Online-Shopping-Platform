@@ -1,3 +1,5 @@
+# Backend
+
 ## .env
 
 **PORT** = 5000
@@ -6,8 +8,18 @@
 
 **JWT_SECRET** = mysecretkey
 
-# Setup Backend 
+## Setup Backend 
 
 **npm install**
 
 **npm start**
+
+
+
+# API Reference
+
+#### Authentication
+
+```http
+  POST /api/register
+```

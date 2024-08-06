@@ -18,7 +18,7 @@ const userSchema = new Schema(
     password: {
       type: String,
       require: true,
-      minlength: 6,
+      
     },
   },
   {
@@ -26,14 +26,7 @@ const userSchema = new Schema(
   }
 );
 
-userSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) {
-    next();
-  }
-  const salt = await bcrypt.getSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
-  next();
-});
+
 
 const User = mongoose.model("User", userSchema);
 module.exports = User;

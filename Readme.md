@@ -1,4 +1,4 @@
-# CustoMall: Backend
+# CustoMall--Personalized-Online-Shopping-Platform
 
 Build a customizable e-commerce platform with a seamless user experience.
 
@@ -9,13 +9,15 @@ Build a customizable e-commerce platform with a seamless user experience.
 
 **Frontend** React.js, Tailwind CSS, 
 
-## .env
+## Backend/.env 
 
 **PORT** = 5000
 
 **MONOG_URL** = mongodb+srv://CustoMall:****@customall***********
 
 **JWT_SECRET** = mysecretkey
+
+## Frontend/.env 
 
 # Setup Backend 
 
